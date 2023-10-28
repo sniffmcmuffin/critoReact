@@ -1,8 +1,21 @@
 import React from 'react'
 
-const Button = ({ text, url }) => {
+const Button = ({type, text, url}) => {
+
+  const getButtonClassName = () => {
+    switch (type) {
+      case 'yellow':
+        return 'btn-yellow'
+      case 'black':
+        return 'btn-black'
+      case 'transparent':
+        return 'btn-transparent'
+    }
+  }
+
   return (
-    <a className="btn-yellow" href={url}>
+
+    <a className={getButtonClassName()} href={url}>
         {text}
         <i className="fa-solid fa-arrow-pointer fa-rotate-90"></i></a>
                  

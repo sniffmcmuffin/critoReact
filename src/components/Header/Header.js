@@ -9,7 +9,6 @@ const Header = () => {
     return (
         <header>            
             {/* <img className="background-lines" src={img_backgroundlines} alt=".."/> */}
-
             <NavigeringSection />
             <ShowcaseSection />
         </header>
