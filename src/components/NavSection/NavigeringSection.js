@@ -3,10 +3,13 @@ import React from 'react'
 
 import img_Logotype from '../../assets/images/logotype.svg'
 import Button from '../DivStuff/Button'
+import Header from '../Header/Header'
 
 const NavigeringSection = () => {
   return (
-      <section className="nav-section">
+    
+    
+<section className="nav-section">
           <div className="container">
              <a href="index.html"><img src={img_Logotype} alt="Crito logo" /></a>
               <button className="menu-bars"><i className="fa-solid fa-bars"></i></button>
