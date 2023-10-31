@@ -8,7 +8,6 @@ import Header from '../Header/Header'
 const NavigeringSection = () => {
   return (
     
-    
 <section className="nav-section">
           <div className="container">
              <a href="index.html"><img src={img_Logotype} alt="Crito logo" /></a>

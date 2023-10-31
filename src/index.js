@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Header from './components/Header/Header';
-import ServicesSection from './components/ServicesSection/ServicesSection';
 import './style.css';
 import Home from './views/Home';
 import Contacts from './views/Contacts';
@@ -14,10 +13,6 @@ import Footer from './components/Footer/Footer';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-         <div className="wrapper">
-      <Header />   
-      <ServicesSection />
-        </div>
 
 
 
@@ -30,9 +25,6 @@ root.render(
   <Route path='*' element={<NotFound />} />
 </Routes>
 </BrowserRouter>
-
-<Footer />
-
 
 
   </React.StrictMode>
