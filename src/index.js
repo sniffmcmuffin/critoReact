@@ -8,21 +8,20 @@ import OurServices from './components/sections/OurServices';
 import Home from './views/Home';
 import Contact from './views/Contact';
 import NotFound from './views/NotFound';
+import Footer from './components/sections/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
-  <React.StrictMode>   
-
+  <React.StrictMode>
     <BrowserRouter>
-    <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/contacts' element={<Contact />} />
-      <Route path='*' element={<NotFound />} />
-
-    </Routes>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/contacts' element={<Contact />} />
+        <Route path='*' element={<NotFound />} />
+      </Routes>
+      <Footer />
     </BrowserRouter>
-    <Header /> 
-    {/* <OurServices />  */}
-
   </React.StrictMode>
 );

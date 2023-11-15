@@ -1,5 +1,98 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,900&family=Inter:wght@300;400;500;700;900&display=swap");
+header {
+  background-color: #F0EFE9;
+  padding: 16px;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+}
+header .container .menu-bars {
+  border: none;
+  font-size: 25px;
+  background-color: transparent;
+}
+@media (min-width: 992px) {
+  header .container .menu-bars {
+    display: none;
+  }
+}
+header .container .btn-menu {
+  z-index: 1;
+  border: none;
+  font-size: 2rem;
+  background-color: transparent;
+}
+header .container .btn-menu-active {
+  color: #ffffff;
+}
+header .container .menu {
+  display: none;
+  flex: 1;
+}
+@media (min-width: 992px) {
+  header .container .menu {
+    display: block;
+  }
+}
+header .container .menu .top-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #DAD9D3;
+}
+@media (min-width: 1200px) {
+  header .container .menu .top-menu {
+    justify-content: space-between;
+  }
+}
+header .container .menu .top-menu .contact-information {
+  display: none;
+  align-items: center;
+}
+@media (min-width: 1200px) {
+  header .container .menu .top-menu .contact-information {
+    display: flex;
+  }
+}
+header .container .menu .top-menu .contact-information .content-box {
+  padding-right: 30px;
+  margin-right: 30px;
+  border-right: 1px solid #DAD9D3;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+}
+header .container .menu .top-menu .contact-information .content-box i {
+  margin-right: 5px;
+  font-size: 1.2em;
+}
+header .container .menu .top-menu .contact-information .content-box.last {
+  border: none;
+}
+header .container .menu .top-menu .social-media a {
+  color: #191919;
+  font-size: 1.3rem;
+  margin-left: 10x;
+}
+header .container .menu .top-menu .social-media a:hover {
+  color: #7c7c7c;
+}
+header .container .menu .main-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+header .container .menu .main-menu .btn-login {
+  padding-top: 12px;
+  padding-bottom: 13px;
+}
+
 html body {
   color: #191919;
   font-family: "Inter", sans-serif;
@@ -33,28 +126,6 @@ html body {
   h3 {
     font-size: 20px;
   }
-}
-
-nav a {
-  display: inline-block;
-  color: #191919;
-  text-decoration: none;
-  margin-right: 35px;
-  position: relative;
-}
-nav a.active {
-  font-weight: 500;
-}
-nav a.active::after, nav a:hover::after {
-  content: "";
-  position: absolute;
-  font-weight: 500;
-  height: 2px;
-  width: 15px;
-  background-color: #191919;
-  left: 50%;
-  bottom: -3px;
-  transform: translate(calc(50% - 15px));
 }
 
 .btn-yellow {
@@ -195,90 +266,6 @@ nav a.active::after, nav a:hover::after {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-header {
-  background-color: #F0EFE9;
-  padding: 16px;
-}
-header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 70px;
-}
-header .container .menu-bars {
-  border: none;
-  font-size: 25px;
-  background-color: transparent;
-}
-@media (min-width: 992px) {
-  header .container .menu-bars {
-    display: none;
-  }
-}
-header .container .menu {
-  display: none;
-  flex: 1;
-}
-@media (min-width: 992px) {
-  header .container .menu {
-    display: block;
-  }
-}
-header .container .menu .top-menu {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #DAD9D3;
-}
-@media (min-width: 1200px) {
-  header .container .menu .top-menu {
-    justify-content: space-between;
-  }
-}
-header .container .menu .top-menu .contact-information {
-  display: none;
-  align-items: center;
-}
-@media (min-width: 1200px) {
-  header .container .menu .top-menu .contact-information {
-    display: flex;
-  }
-}
-header .container .menu .top-menu .contact-information .content-box {
-  padding-right: 30px;
-  margin-right: 30px;
-  border-right: 1px solid #DAD9D3;
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  font-weight: 300;
-}
-header .container .menu .top-menu .contact-information .content-box i {
-  margin-right: 5px;
-  font-size: 1.2em;
-}
-header .container .menu .top-menu .contact-information .content-box.last {
-  border: none;
-}
-header .container .menu .top-menu .social-media a {
-  color: #191919;
-  font-size: 1.3rem;
-  margin-left: 10x;
-}
-header .container .menu .top-menu .social-media a:hover {
-  color: #7c7c7c;
-}
-header .container .menu .main-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 10px;
-}
-header .container .menu .main-menu .btn-login {
-  padding-top: 12px;
-  padding-bottom: 13px;
 }
 
 .showcase {

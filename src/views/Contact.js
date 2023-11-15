@@ -1,8 +1,13 @@
 import React from 'react'
 
+import '../components/sections/ContactSec'
+import ContactSec from '../components/sections/ContactSec'
+
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <main>
+      <ContactSec />
+    </main>
   )
 }
 
