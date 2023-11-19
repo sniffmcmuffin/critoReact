@@ -6,6 +6,7 @@ import './style.scss'
 import Header from './components/sections/Header';
 import OurServices from './components/sections/OurServices';
 import Home from './views/Home';
+import News from './views/News'
 import Contact from './views/Contact';
 import NotFound from './views/NotFound';
 import Footer from './components/sections/Footer';
@@ -19,6 +20,7 @@ root.render(
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/contacts' element={<Contact />} />
+        <Route path='/news' element={<News />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer />

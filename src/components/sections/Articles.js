@@ -62,8 +62,6 @@ const Articles = () => {
                 </div>
 
             </div>
-        {/* </div>
-        </div > */}
         </section >   
   )
 }

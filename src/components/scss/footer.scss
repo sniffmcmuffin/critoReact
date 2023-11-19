@@ -1,0 +1,104 @@
+footer {
+    background-color: #0e1021;
+    text-align: center;
+ 
+    .streck { 
+        border-top: 1px solid #DAD9D3;
+        padding-bottom: 2em;
+        color: #ffffffb3;
+    }
+ 
+    img.background-lines4 {
+        position: relative;
+        left: 95em;
+        bottom: 13em;
+    }
+
+    .container {
+
+        img.background-lines4 {
+            position: relative;
+            left: 110em;
+            bottom: 1em;
+       }
+               
+        .logga {
+            display: flex;
+            align-items: left;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 1em;
+            padding-bottom: 2em;
+            padding-right: 6em;
+
+            img {
+                width: 50%;
+            }
+        }
+
+        .spacing {
+            line-height: 2.8;
+            gap: 6em;
+        }
+
+        h3 {
+            padding-top: 30px;
+            color: #ffffff;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 22;    
+            line-height: 33px;
+        }
+
+        p { // Lista ut hur detta får bättre linebreaks på mindre skärm.
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            font-style: normal;
+            text-align: left;
+            color: #ffffffb3;
+        }
+
+        a {
+            display: inline-block; 
+            color: #ffffffb3;
+            text-decoration: none;
+            margin-right: 35px;
+            position: relative;
+
+            &.active {
+                font-weight: 500;
+            }
+
+            &.active::after,
+            &:hover::after {
+                content: '';
+                position: absolute;
+                font-weight: 500;
+                height: 2px;
+                width: 15px;
+                background-color: #ffffff;
+                left: 50%;
+                bottom: -3px;
+                transform: translate((calc(50% - 15px))); 
+            }
+        }
+   
+        .bottom-footer {
+            display: flex;
+            align-items: left;
+            justify-content: space-between;
+
+            .social-media {
+                a {
+                    color: #ffffff;
+                    font-size: 1em;
+                    margin-left: 10x;
+
+                    &:hover {
+                        color: #7c7c7c;
+                    }
+                }
+            }
+        }
+   }
+}
