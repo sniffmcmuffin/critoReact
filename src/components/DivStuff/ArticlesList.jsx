@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import '../scss/main.scss'
-
 const ArticlesList = () => {
 
   const [ArticlesList, setArticles] = useState([])
@@ -20,35 +18,33 @@ const ArticlesList = () => {
 
   return (
     <div>
-       <div className="container">
-      <div className="articles-list">
-      <div className="grid-container">
-        {
-          ArticlesList.map(article => (
-            <Link key={article.id} to="">
-               <div className="grid-item">
-                <div className="services">
-                  <div className="box">
+      <div className="container">
+        <div className="articles-list">
+          <div className="grid-container">
+            {
+              ArticlesList.map(article => (
+                <Link key={article.id} to={`/news/${article.id}`}>
+                  <div className="grid-item">
+                    {/* <div className="services">
+                  <div className="box"> */}
                     <img src={article.imageUrl} style={{ width: '420px', height: '230px' }} alt="25 mars" />
-                      <div className="image">
+                    <div className="image">
                       {/* <img src={img_mars} alt="Image of a calender date" /> */}
                     </div>
                     <p>{article.category}</p>
                     <h3>{article.title}</h3>
                     <p>{article.content}</p>
                   </div>
-                </div>
-              </div>
-            </Link>
-          ))
-        }
-               </div>
+                  {/* </div>
+              </div> */}
+                </Link>
+              ))
+            }
+          </div>
+        </div>
       </div>
     </div>
-    </div>
   )
-
-
 }
 
 export default ArticlesList

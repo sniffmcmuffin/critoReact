@@ -10,6 +10,8 @@ import News from './views/News'
 import Contact from './views/Contact';
 import NotFound from './views/NotFound';
 import Footer from './components/sections/Footer';
+import news from './views/News';
+import NewsDeets from './components/sections/NewsDeets';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -22,6 +24,7 @@ root.render(
         <Route path='/contacts' element={<Contact />} />
         <Route path='/news' element={<News />} />
         <Route path='*' element={<NotFound />} />
+        <Route path="/news/:id" element={<NewsDeets />} />
       </Routes>
       <Footer />
     </BrowserRouter>
